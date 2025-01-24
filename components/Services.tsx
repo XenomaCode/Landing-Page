@@ -45,6 +45,7 @@ const services = [
 ];
 
 const Services: React.FC = () => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [selectedService, setSelectedService] = useState<any>(null);
 
   return (
