@@ -3,17 +3,19 @@ import { motion } from 'framer-motion';
 const Hero: React.FC = () => {
   return (
     <section className="flex flex-col items-center justify-center h-screen text-white">
-      <motion.h1
-        className="text-6xl font-extrabold text-center leading-tight"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        Bienvenido a<br />
-        <span className="text-[#FFFFFF]">Xenoma Code</span>
-      </motion.h1>
+      <div className='m-6'>
+        <motion.h1
+          className="text-6xl font-extrabold text-center leading-tight"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Bienvenido a<br />
+          <span className="text-[#FFFFFF] italic ">Xenoma Code</span>
+        </motion.h1>
+      </div>
       <motion.p
-        className="text-2xl mt-4 text-center max-w-2xl"
+        className="text-2xl mt-4 text-center max-w-2xl mr-3 ml-3"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}

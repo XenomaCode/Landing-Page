@@ -45,8 +45,7 @@ const services = [
 ];
 
 const Services: React.FC = () => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [selectedService, setSelectedService] = useState<any>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <section className="py-16">
@@ -56,47 +55,40 @@ const Services: React.FC = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center justify-center bg-[#1F1F2E] rounded-lg p-6 border border-transparent hover:border-gradient-to-r hover:from-[#7F00F5] hover:to-[#00D4FF] cursor-pointer transition-all duration-300"
+              className="relative flex flex-col items-center justify-center bg-[#1F1F2E] rounded-lg p-6 border border-transparent hover:border-gradient-to-r hover:from-[#7F00F5] hover:to-[#00D4FF] transition-all duration-300"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              onClick={() => setSelectedService(service)}
+              style={{
+                opacity: hoveredIndex !== null && hoveredIndex !== index ? 0.5 : 1,
+                zIndex: hoveredIndex === index ? 10 : 1
+              }}
+              whileHover={{
+                scale: 1.1,
+                zIndex: 10,
+                transition: { duration: 0.3 }
+              }}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
             >
               <div className="text-5xl text-gradient mb-4">{service.icon}</div>
-              <h3 className="text-lg font-semibold text-white">{service.title}</h3>
+              <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
+              
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{
+                  opacity: hoveredIndex === index ? 1 : 0,
+                  height: hoveredIndex === index ? 'auto' : 0
+                }}
+                transition={{ duration: 0.3 }}
+                className="overflow-hidden"
+              >
+                <p className="text-white text-m text-center mt-2">{service.description}</p>
+              </motion.div>
             </motion.div>
           ))}
         </div>
       </div>
-
-      {/* Modal */}
-      {selectedService && (
-        <motion.div
-          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={() => setSelectedService(null)}
-        >
-          <motion.div
-            className="bg-white rounded-lg p-8 max-w-md text-center"
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0.8 }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h3 className="text-2xl font-bold text-[#7F00F5]">{selectedService.title}</h3>
-            <p className="mt-4 text-gray-600">{selectedService.description}</p>
-            <button
-              className="mt-6 px-6 py-2 bg-[#7F00F5] text-white font-bold rounded hover:bg-purple-800"
-              onClick={() => setSelectedService(null)}
-            >
-              Cerrar
-            </button>
-          </motion.div>
-        </motion.div>
-      )}
     </section>
   );
 };
