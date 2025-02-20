@@ -8,7 +8,7 @@ import '../styles/globals.css';
 
 export default function Home() {
     return (
-      <div className="bg-gradient-to-br from-[#7F00F5] to-[#000000] text-white">
+      <div className="bg-gradient-to-br from-[#000000] to-[#7F00F5] text-white">
         <Header />
         <Hero />
         <Services />
