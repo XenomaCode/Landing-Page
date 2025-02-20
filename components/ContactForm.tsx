@@ -11,7 +11,7 @@ const ContactForm: React.FC = () => {
 
     try {
       const formData = new FormData(e.currentTarget);
-      const response = await fetch('https://formspree.io/f/xbldwobg', { // Reemplaza TU_FORM_ID con tu ID real
+      const response = await fetch('https://formspree.io/f/xbldwobg', {
         method: 'POST',
         body: formData,
         headers: {
@@ -22,9 +22,9 @@ const ContactForm: React.FC = () => {
       if (response.ok) {
         setIsSubmitted(true);
       } else {
-        throw new Error('Error al enviar el formulario');
+        throw new Error();
       }
-    } catch (error) {
+    } catch {
       alert('Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.');
     } finally {
       setIsSubmitting(false);
