@@ -18,16 +18,64 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     id: 1,
-    name: "Nombre del Miembro",
-    role: "Full Stack Developer",
+    name: "Moises Hernandez Alvarado",
+    role: "Ingeniero en Software y Sistemas Computacionales",
     image: "/images/team/member1.jpg", // Asegúrate de tener esta imagen
     description: "Especialista en desarrollo web y aplicaciones móviles con más de 5 años de experiencia.",
     skills: ["React", "Node.js", "Flutter", "AWS"],
     socialLinks: {
-      github: "https://github.com/username",
-      linkedin: "https://linkedin.com/in/username",
+      github: "https://github.com/MoisesHernandezAlvarado",
+      linkedin: "https://www.linkedin.com/in/moises-hernandez-alvarado-6baa16273/",
     }
   },
+  {
+    id: 2,
+    name: "Alberto Juárez Ávalos",
+    role: "Ingeniero en Software y Sistemas Computacionales",
+    image: "/images/team/member1.jpg", // Asegúrate de tener esta imagen
+    description: "Especialista en desarrollo web y aplicaciones móviles con más de 5 años de experiencia.",
+    skills: ["React", "Node.js", "Flutter", "AWS"],
+    socialLinks: {
+      github: "https://github.com/albertoj09",
+      linkedin: "https://www.linkedin.com/in/alberto-juárez-avalos-1a9249274/",
+    }
+  },
+  {
+    id: 3,
+    name: "Donovan Vince Lara Alvarado",
+    role: "Ingeniero en Software y Sistemas Computacionales",
+    image: "/images/team/member1.jpg", // Asegúrate de tener esta imagen
+    description: "Especialista en desarrollo web y aplicaciones móviles con más de 5 años de experiencia.",
+    skills: ["React", "Node.js", "Flutter", "AWS"],
+    socialLinks: {
+      github: "https://github.com/onlydonos",
+      linkedin: "https://www.linkedin.com/in/donovan-vince-lara-alvarado-1575b1294/",
+    }
+  },
+  {
+    id: 4,
+    name: "Oziel Imanol Lemus Montelongo",
+    role: "Ingeniero en Software y Sistemas Computacionales",
+    image: "/images/team/member1.jpg", // Asegúrate de tener esta imagen
+    description: "Especialista en desarrollo web y aplicaciones móviles con más de 5 años de experiencia.",
+    skills: ["React", "Node.js", "Flutter", "AWS"],
+    socialLinks: {
+      github: "https://github.com/OzielLM",
+      linkedin: "https://www.linkedin.com/in/oziel-imanol-lemus-montelongo-b7aa69302/",
+    }
+  },
+  {
+    id: 5,
+    name: "Braulio Alejandro Navarrete Horta",
+    role: "Ingeniero en Software y Sistemas Computacionales",
+    image: "/images/team/member1.jpg", // Asegúrate de tener esta imagen
+    description: "Especialista en desarrollo web y aplicaciones móviles con más de 5 años de experiencia.",
+    skills: ["React", "Node.js", "Flutter", "AWS"],
+    socialLinks: {
+      github: "https://github.com/BraulioAlejandroNavarreteHorta",
+      linkedin: "https://www.linkedin.com/in/braulio-alejandro-navarrete-horta-024248274/",
+    }
+  }
   // Agrega más miembros aquí
 ];
 
@@ -65,7 +113,7 @@ const OurTeam: React.FC = () => {
             >
               <div className="relative overflow-hidden rounded-xl bg-gradient-to-b from-purple-900/20 to-black/30 backdrop-blur-sm border border-white/10 p-6">
                 {/* Imagen del miembro */}
-                <div className="relative w-48 h-48 mx-auto mb-6">
+                {/* <div className="relative w-48 h-48 mx-auto mb-6">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#7F00F5] to-[#00D4FF] p-1">
                     <div className="rounded-full overflow-hidden w-full h-full">
                       <Image
@@ -76,7 +124,7 @@ const OurTeam: React.FC = () => {
                       />
                     </div>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Información del miembro */}
                 <div className="text-center">

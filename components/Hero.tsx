@@ -111,22 +111,9 @@ const Hero: React.FC = () => {
             className="bg-gradient-to-br from-[#000000] to-[#7F00F5] rounded-xl p-8 max-w-md w-full mx-4"
             onClick={e => e.stopPropagation()}
           >
-            {showForm ? (
-              <>
-                <button
-                  onClick={handleEmail}
-                  className="mb-4 text-white/70 hover:text-white transition-colors"
-                >
-                  ← Volver
-                </button>
-                <ContactForm />
-              </>
-            ) : (
-              <h3 className="text-2xl font-bold text-center mb-8 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-                ¿Cómo prefieres contactarnos?
-              </h3>
-            )}
-            
+            <h3 className="text-2xl font-bold text-center mb-8 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
+              ¿Cómo prefieres contactarnos?
+            </h3>  
             <div className="space-y-4">
               <button
                 onClick={handleWhatsApp}
@@ -147,6 +134,14 @@ const Hero: React.FC = () => {
                 </svg>
                 <span className="font-semibold">Correo</span>
               </button>
+
+              {showForm ? (
+                <>
+                  <ContactForm />
+                </>
+              ) : (
+                <h1></h1>
+              )}
               
               <button
                 onClick={() => setIsModalOpen(false)}
