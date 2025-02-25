@@ -1,0 +1,12 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/usuario/public_html/
+    - /bin/cp -R .next/* $DEPLOYPATH/.next
+    - /bin/cp -R public/* $DEPLOYPATH/public
+    - /bin/cp -R node_modules $DEPLOYPATH/node_modules
+    - /bin/cp package.json $DEPLOYPATH
+    - /bin/cp yarn.lock $DEPLOYPATH
+    - cd $DEPLOYPATH
+    - yarn install --main
+    - yarn build 
