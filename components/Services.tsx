@@ -57,7 +57,7 @@ const Services: React.FC = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="bg-gradient-to-r from-[#7F00F5] to-[#00D4FF] p-[2px] rounded-lg"
+              className="bg-gradient-to-r from-primary to-secondary p-[2px] rounded-lg"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

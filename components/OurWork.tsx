@@ -162,7 +162,7 @@ const OurWork: React.FC = () => {
               onClick={() => setSelectedCategory(category)}
               className={`px-6 py-2 rounded-full transition-all duration-300 ${
                 selectedCategory === category
-                  ? 'bg-gradient-to-r from-[#7F00F5] to-[#00D4FF] text-white'
+                  ? 'bg-gradient-to-r from-primary to-secondary text-white'
                   : 'bg-white/10 text-white/70 hover:bg-white/20'
               }`}
             >
@@ -220,7 +220,7 @@ const OurWork: React.FC = () => {
 
                 {/* Efecto de hover */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-[#7F00F5] to-[#00D4FF] opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+                  className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-20 transition-opacity duration-300"
                   animate={{
                     opacity: hoveredProject === project.id ? 0.2 : 0
                   }}

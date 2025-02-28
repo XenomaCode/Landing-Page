@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,15 +43,19 @@ const Header: React.FC = () => {
     `}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center"
         >
-          <div className='bg-gradient-to-r from-[#7F00F5] to-[#00D4FF] p-[2px] rounded-lg'>
-            <div className='bg-black rounded-lg p-2'>
-              <h1 className="text-2xl font-bold italic text-white">Xenoma Code</h1>
-            </div>
+          <div className='rounded-lg p-2 flex items-center gap-2'>
+            <Image
+              src="/xenomaicono.svg"
+              alt='Xenomacode Logo'
+              width={80}
+              height={80}
+              priority />
+            <h1 className="text-xl text-white">Xenoma Code</h1>
           </div>
         </motion.div>
 
@@ -68,14 +73,14 @@ const Header: React.FC = () => {
                 className="relative text-white text-lg hover:text-purple-300 transition-colors group cursor-pointer"
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#7F00F5] to-[#00D4FF] transition-all duration-300 group-hover:w-full" />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-full" />
               </button>
             </motion.div>
           ))}
         </nav>
 
         {/* Botón hamburguesa */}
-        <button 
+        <button
           className="lg:hidden relative z-50 w-10 h-10 focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >

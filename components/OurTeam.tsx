@@ -127,7 +127,7 @@ const OurTeam: React.FC = () => {
               <div className="relative overflow-hidden rounded-xl bg-gradient-to-b from-purple-900/20 to-black/30 backdrop-blur-sm border border-white/10 p-6">
                 {/* Imagen del miembro */}
                 {/* <div className="relative w-48 h-48 mx-auto mb-6">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#7F00F5] to-[#00D4FF] p-1">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary p-1">
                     <div className="rounded-full overflow-hidden w-full h-full">
                       <Image
                         src={member.image}
@@ -142,7 +142,7 @@ const OurTeam: React.FC = () => {
                 {/* Información del miembro */}
                 <div className="text-center">
                   <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                  <p className="text-[#00D4FF] font-medium mb-3">{member.role}</p>
+                  <p className="text-terceary font-medium mb-3">{member.role}</p>
                   <p className="text-white/70 mb-4">{member.description}</p>
 
                   {/* Habilidades */}
