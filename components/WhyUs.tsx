@@ -69,7 +69,7 @@ const WhyChooseUs: React.FC = () => {
               onHoverEnd={() => setHoveredCard(null)}
             >
               {/* Card Background */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#7F00F5] to-[#00D4FF] rounded-xl opacity-50 group-hover:opacity-100 blur transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-xl opacity-50 group-hover:opacity-100 blur transition-opacity duration-300" />
               
               {/* Card Content */}
               <div className="relative p-8 bg-black/50 backdrop-blur-sm rounded-xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 h-full">
@@ -92,7 +92,7 @@ const WhyChooseUs: React.FC = () => {
 
                 {/* Hover Effect Line */}
                 <motion.div
-                  className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#7F00F5] to-[#00D4FF]"
+                  className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary"
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: hoveredCard === index ? 1 : 0 }}
                   transition={{ duration: 0.3 }}

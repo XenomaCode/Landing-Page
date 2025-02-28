@@ -61,7 +61,7 @@ const AnimatedBackground: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(127,0,245,0.15)_0%,transparent_60%)]" />
         
         {/* Efecto de brillo superior */}
-        <div className="absolute top-0 left-0 right-0 h-[500px] bg-gradient-to-b from-[#7F00F5]/10 via-[#00D4FF]/5 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-[500px] bg-gradient-to-b from-primary/10 via-secondary/5 to-transparent" />
         
         {/* Efecto de neblina */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/40" />
@@ -114,7 +114,7 @@ const AnimatedBackground: React.FC = () => {
         className="absolute inset-0 opacity-[0.07]"
         style={{
           backgroundImage: `linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px),
-                           linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)`,
+                            linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)`,
           backgroundSize: '50px 50px',
         }}
       />
